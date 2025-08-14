@@ -19,7 +19,7 @@ pipeline {
         sh '''
           cd live/${ENV}/network
           terraform fmt -check -recursive || true
-          terraform init -input=false \
+          terraform init -input=false -reconfigure \
             -backend-config="bucket=${TF_STATE_BUCKET}" \
             -backend-config="key=network/${ENV}/terraform.tfstate" \
             -backend-config="region=${AWS_REGION}" \
