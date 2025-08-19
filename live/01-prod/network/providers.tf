@@ -1,7 +1,10 @@
-# live/prod/network/providers.tf
-variable "region" {
-  type    = string
-  default = "ap-northeast-2"
+# live/01-prod/network/providers.tf
+provider "aws" {
+  region = var.region
+}
+
+data "aws_availability_zones" "available" {
+  state = "available"
 }
 
 # prod 계정: AssumeRole 없음 → Jenkins EC2의 인스턴스 프로파일을 그대로 사용
