@@ -26,3 +26,6 @@ variable "tags" {
   type    = map(string)
   default = { ManagedBy = "Jenkins", Project = "vpc" }
 }
+
+variable "public_subnet_cidrs"  { type = list(string) default = null }
+variable "private_subnet_cidrs" { type = list(string) default = null }
