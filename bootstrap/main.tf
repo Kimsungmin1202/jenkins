@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "tfstate" {
 
   tags = var.tags
 }
-
+1
 resource "aws_s3_bucket_versioning" "v" {
   bucket = aws_s3_bucket.tfstate.id
 

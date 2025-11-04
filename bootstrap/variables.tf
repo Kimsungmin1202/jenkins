@@ -2,7 +2,7 @@ variable "region" {
   type    = string
   default = "ap-northeast-2"
 }
-
+111111
 variable "state_bucket_name" {
   description = "S3 bucket name for Terraform state"
   type        = string
